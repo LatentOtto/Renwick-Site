@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RENWICK — Custom Jerseys, Polos &amp; Uniforms · Malaysia</title>
 <meta name="description" content="Custom jerseys, polos and uniforms from 30 pieces. Crest, colours, names and numbers. Kuala Lumpur, Malaysia.">
 <meta property="og:title" content="RENWICK — Thirty Deep.">
@@ -13,284 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --black:#08090D; --night:#12141D; --line:#2A2E3D;
-  --blue:#2350FF; --blue2:#1638C9;
-  --canta:#FFA36C; --canta2:#FF8A45;
-  --paper:#EEE8DC; --paper2:#E2DACB; --white:#F7F4EE; --ink:#08090D; --mute:#5B5A57;
-  --anton:Anton,Impact,'Arial Narrow',sans-serif;
-  --black-face:'Archivo Black','Arial Black',sans-serif;
-  --body:Archivo,'Helvetica Neue',Arial,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;background:var(--black);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-button{font:inherit;cursor:pointer;color:inherit}
-a{color:inherit}
-.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
-.anton{font-family:var(--anton);font-weight:400;text-transform:uppercase;line-height:.86;letter-spacing:-.005em}
-.wrap{max-width:1320px;margin:0 auto;padding:0 28px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-:focus-visible{outline:3px solid var(--canta);outline-offset:3px}
-
-/* textures */
-.grain{position:relative;isolation:isolate}
-.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;opacity:.22;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-.dots{background-image:radial-gradient(circle,currentColor 1.15px,transparent 1.6px);background-size:7px 7px}
-
-/* buttons — square, hard shadow */
-.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--black-face);font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:18px 26px;border:2px solid var(--black);transition:transform .12s ease,box-shadow .12s ease}
-.btn-c{background:var(--canta);color:var(--black);box-shadow:6px 6px 0 var(--blue)}
-.btn-c:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--blue)}
-.btn-k{background:var(--black);color:var(--white);box-shadow:6px 6px 0 var(--canta);border-color:var(--black)}
-.btn-k:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--canta)}
-.arrow{font-family:var(--body);font-weight:800}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:50;background:var(--black);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px}
-.logo{display:flex;align-items:baseline;gap:8px;text-decoration:none}
-.logo b{font-family:var(--black-face);font-size:24px;letter-spacing:-.02em}
-.logo sup{font-family:var(--mono);font-size:10px;color:var(--canta)}
-.nav nav{display:flex;gap:26px}
-.nav nav a{text-decoration:none;color:#B9BCC8}
-.nav nav a span{color:var(--canta);margin-right:4px}
-.nav nav a:hover{color:var(--white)}
-.nav-cta{font-family:var(--black-face);font-size:13px;letter-spacing:.06em;background:var(--blue);color:var(--white);text-decoration:none;padding:12px 16px}
-.nav-cta:hover{background:var(--canta);color:var(--black)}
-.nav-cta{white-space:nowrap}
-@media(max-width:900px){.nav nav{display:none}}
-@media(max-width:520px){.logo sup{display:none}.nav-cta{padding:10px 12px}}
-
-/* HERO */
-.hero{position:relative;overflow:hidden;min-height:calc(100vh - 64px);background:var(--black)}
-.rays{position:absolute;inset:0;z-index:0;
-  background:
-   radial-gradient(45% 50% at 55% 108%,rgba(255,163,108,.95) 0%,rgba(255,138,69,.45) 35%,transparent 70%),
-   radial-gradient(80% 95% at 55% 105%,rgba(35,80,255,1) 0%,rgba(22,56,201,.55) 45%,transparent 80%);}
-.rays::before{content:"";position:absolute;inset:0;
-  background:repeating-linear-gradient(90deg,rgba(8,9,13,.0) 0 3px,rgba(8,9,13,.55) 3px 7px);
-  -webkit-mask:linear-gradient(to top,#000 0%,rgba(0,0,0,.6) 45%,transparent 85%);mask:linear-gradient(to top,#000 0%,rgba(0,0,0,.6) 45%,transparent 85%)}
-.hero-meta{position:relative;z-index:6;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;color:#9BA0B3}
-.hero-meta b{color:var(--canta);font-weight:500}
-.thirty{position:absolute;z-index:1;left:50%;top:11%;transform:translateX(-50%);font-size:clamp(150px,27vw,420px);color:var(--white);white-space:nowrap;letter-spacing:-.02em}
-.hero-shirt{position:absolute;z-index:3;left:50%;top:33%;width:min(36vw,500px);transform:translateX(-46%) rotate(-7deg);filter:drop-shadow(0 40px 50px rgba(0,0,0,.6))}
-.hero-back{position:absolute;z-index:2;right:3%;top:46%;width:min(17vw,240px);transform:rotate(9deg);filter:drop-shadow(0 20px 30px rgba(0,0,0,.6)) saturate(.9)}
-.deep{position:absolute;z-index:4;right:16%;bottom:15%;font-size:clamp(120px,19vw,300px);color:var(--canta);text-shadow:0 10px 40px rgba(0,0,0,.35)}
-.hero-copy{position:absolute;z-index:6;left:28px;bottom:120px;width:min(330px,40vw);display:flex;flex-direction:column;gap:22px}
-.hero-copy p{margin:0;font-family:var(--mono);font-size:13px;line-height:1.65;color:#D6D8E0;text-transform:none;letter-spacing:0}
-.hero-copy p strong{color:var(--white);font-weight:600}
-.hero-stats{position:absolute;z-index:6;left:28px;top:150px;display:flex;flex-direction:column;gap:14px;text-align:left}
-.hero-stats b{display:block;font-family:var(--anton);font-weight:400;font-size:44px;line-height:1}
-.hero-stats span{color:#9BA0B3}
-.slash{position:absolute;z-index:7;left:-5%;right:-5%;bottom:34px;transform:rotate(-2.2deg);background:var(--blue);overflow:hidden;white-space:nowrap;border-top:2px solid var(--black);border-bottom:2px solid var(--black)}
-.slash div{display:inline-flex;gap:34px;padding:12px 0;font-family:var(--anton);font-size:26px;text-transform:uppercase;letter-spacing:.02em;animation:roll 40s linear infinite}
-.slash i{font-style:normal;color:var(--canta)}
-@keyframes roll{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.slash div{animation:none}}
-@media(max-width:820px){
-  .hero{min-height:auto;padding-bottom:110px}
-  .thirty{position:relative;left:auto;top:auto;transform:none;display:block;text-align:center;font-size:30vw;margin-top:28px}
-  .hero-shirt{position:relative;left:auto;top:auto;width:62vw;margin:-6vw auto 0;transform:rotate(-6deg)}
-  .hero-back{display:none}
-  .deep{position:relative;right:auto;bottom:auto;display:block;text-align:right;font-size:26vw;margin:-16vw 6vw 0 0}
-  .hero-copy{position:relative;left:auto;bottom:auto;width:auto;padding:24px 28px 0}
-  .hero-stats{position:relative;left:auto;top:auto;flex-direction:row;flex-wrap:wrap;gap:22px;text-align:left;padding:28px 28px 0}
-  .hero-stats b{font-size:34px}
-  .slash{bottom:26px}
-}
-
-/* SECTION HEAD (numbered) */
-.sec-no{font-family:var(--anton);font-size:clamp(120px,16vw,240px);line-height:.8;color:transparent;-webkit-text-stroke:2px currentColor}
-.kicker{display:flex;gap:14px;align-items:center}
-.kicker::before{content:"";width:34px;height:3px;background:currentColor}
-
-/* 01 LINE-UP (paper) */
-.lineup{background:var(--paper);color:var(--ink);padding:110px 0 90px}
-.lu-head{display:grid;grid-template-columns:auto 1fr;gap:10px 34px;align-items:end;margin-bottom:46px}
-.lu-head .sec-no{color:var(--blue);grid-row:span 2}
-.lu-head h2{margin:0;font-size:clamp(64px,10vw,150px)}
-.lu-head .row2{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-.lu-head p{margin:0;max-width:440px;font-size:18px}
-.filters{display:flex;gap:0;flex-wrap:wrap;font-family:var(--anton);font-size:30px;text-transform:uppercase}
-.filters button{background:none;border:0;padding:4px 4px;color:#9C958A}
-.filters button::after{content:"/";display:inline-block;margin-left:10px;color:#C9C1B3;text-decoration:none}
-.filters button:last-child::after{content:""}
-.filters button.on{color:var(--ink);text-decoration:underline;text-decoration-color:var(--canta2);text-decoration-thickness:6px;text-underline-offset:6px}
-.rows{border-top:4px solid var(--ink)}
-.r{display:grid;grid-template-columns:150px minmax(0,1.25fr) minmax(0,1fr) 120px;gap:28px;align-items:center;padding:24px 18px;border-bottom:1.5px solid var(--ink);position:relative;transition:background .15s ease,color .15s ease}
-.r:hover{background:var(--ink);color:var(--white)}
-.r:hover .r-name{color:var(--canta)}
-.r-code{font-family:var(--mono);font-size:13px;font-weight:600}
-.r-name{font-family:var(--anton);font-size:clamp(34px,4.2vw,58px);line-height:.9;text-transform:uppercase}
-.r-desc{font-size:15px;line-height:1.5}
-.r-sw{height:64px;position:relative;border:1.5px solid var(--ink);overflow:hidden}
-.r-sw::after{content:"";position:absolute;inset:0;color:rgba(255,255,255,.35);background-image:radial-gradient(circle,currentColor 1.1px,transparent 1.5px);background-size:6px 6px}
-.r-tag{position:absolute;right:18px;top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
-@media(max-width:820px){.r{grid-template-columns:1fr 80px;gap:8px 16px}.r-code{grid-column:1}.r-name{grid-column:1}.r-desc{grid-column:1/-1}.r-sw{grid-column:2;grid-row:1/3;height:100%}.lu-head{grid-template-columns:1fr}.lu-head .sec-no{grid-row:auto}}
-
-/* 02 WINDSTRIKE — magazine spread */
-.spread{background:#0E0F14;padding:90px 0 100px;position:relative;overflow:hidden}
-.sp-mast{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;border-bottom:1px solid #3A3D4A;padding-bottom:14px}
-.sp-mast h2{margin:0;font-family:var(--black-face);font-size:clamp(46px,8.4vw,128px);letter-spacing:-.035em;line-height:.9;text-transform:uppercase}
-.sp-mast h2 em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--canta)}
-.sp-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr) minmax(0,.8fr);gap:30px;margin-top:34px;align-items:start}
-.frame{background:var(--white);padding:10px 10px 8px;margin:0 0 22px;transform:rotate(-1.5deg)}
-.frame:nth-child(2){transform:rotate(1.8deg)}
-.frame img{width:100%;height:230px;object-fit:contain;background:#fff}
-.frame figcaption{color:var(--ink);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding-top:6px;display:flex;justify-content:space-between}
-.sp-center{position:relative;min-height:600px;display:flex;align-items:center;justify-content:center}
-.sp-center::before{content:"";position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(35,80,255,.9),rgba(35,80,255,.25) 55%,transparent 70%);filter:blur(10px)}
-.sp-center .halftone{position:absolute;inset:8% 4%;color:rgba(255,163,108,.45);-webkit-mask:radial-gradient(circle at 50% 55%,#000 0,transparent 62%);mask:radial-gradient(circle at 50% 55%,#000 0,transparent 62%)}
-.sp-center img{position:relative;width:88%;transform:rotate(4deg);filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
-.sp-89{position:absolute;right:2%;top:2%;font-family:var(--anton);font-size:clamp(120px,14vw,220px);color:var(--canta);line-height:.8;z-index:2;mix-blend-mode:normal}
-.sp-text{columns:1;font-family:var(--mono);font-size:12.5px;line-height:1.7;color:#C9CBD4}
-.sp-text p{margin:0 0 14px}
-.spec{list-style:none;padding:0;margin:18px 0 0;border-top:1px solid #3A3D4A}
-.spec li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #3A3D4A;font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em}
-.spec li span:last-child{color:var(--canta)}
-.sp-foot{text-align:center;margin-top:20px}
-.sp-foot h3{margin:0;font-family:var(--black-face);font-size:clamp(30px,4vw,52px);letter-spacing:-.02em;text-transform:uppercase}
-.sp-foot p{margin:8px auto 22px;max-width:620px;color:#AEB2C0;font-size:15px}
-.textlink{font-family:var(--black-face);text-transform:uppercase;letter-spacing:.05em;font-size:15px;color:var(--canta);text-decoration:none;border-bottom:3px solid var(--blue);padding-bottom:4px}
-.textlink:hover{color:var(--white)}
-@media(max-width:900px){.sp-grid{grid-template-columns:1fr 1fr}.sp-center{grid-column:1/-1;grid-row:1;min-height:420px}}
-
-/* 03 MATHS — blue */
-.maths{background:var(--blue);color:var(--white);padding:100px 0;position:relative;overflow:hidden}
-.maths .bgno{position:absolute;right:-2%;top:-6%;font-family:var(--anton);font-size:44vw;line-height:.8;color:rgba(8,9,13,.12);pointer-events:none}
-.m-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr);gap:56px;align-items:start}
-.m-grid h2{margin:0 0 6px;font-size:clamp(70px,10vw,150px)}
-.m-grid h2 span{color:var(--black)}
-.m-lead{margin:22px 0 36px;font-size:19px;max-width:480px}
-.ctl{border-top:2px solid var(--white);padding:20px 0 24px;display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center}
-.ctl>.lbl{font-family:var(--anton);font-size:26px;text-transform:uppercase;line-height:1}
-.qty{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
-.qty button{width:58px;height:58px;background:var(--black);border:0;font-size:26px;color:var(--white)}
-.qty button:hover{background:var(--canta);color:var(--black)}
-.qty input{width:120px;height:58px;border:0;background:var(--white);color:var(--black);font-family:var(--anton);font-size:34px;text-align:center}
-.qty small{align-self:center;margin-left:14px}
-.opts{display:flex;flex-wrap:wrap;gap:8px}
-.opt{background:transparent;border:2px solid var(--white);padding:11px 15px;font-family:var(--black-face);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
-.opt:hover{background:rgba(8,9,13,.25)}
-.opt.on{background:var(--black);border-color:var(--black);color:var(--canta)}
-.receipt{background:var(--white);color:var(--ink);font-family:var(--mono);padding:28px 26px 40px;transform:rotate(1.6deg);box-shadow:14px 18px 0 var(--black);position:relative;
-  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 12px repeat-x;
-  mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 12px repeat-x}
-.rc-head{text-align:center;border-bottom:2px dashed var(--ink);padding-bottom:14px;margin-bottom:14px}
-.rc-head b{display:block;font-family:var(--black-face);font-size:30px;letter-spacing:-.02em}
-.rc-head span{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.rc-line{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:5px 0;text-transform:uppercase}
-.rc-total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px dashed var(--ink);border-bottom:2px dashed var(--ink);margin:14px 0;padding:12px 0}
-.rc-total b{font-family:var(--anton);font-weight:400;font-size:52px;line-height:1}
-.rc-split{display:grid;grid-template-columns:1fr 1fr;gap:0;font-size:12px;text-transform:uppercase;margin-bottom:22px}
-.rc-split div{padding:8px 0}
-.rc-split div+div{text-align:right;border-left:1px dashed var(--ink)}
-.rc-split strong{display:block;font-size:18px}
-.receipt .btn{width:100%;justify-content:center}
-@media(max-width:480px){.rc-total b{font-size:38px}}
-.rc-note{font-size:10.5px;text-align:center;margin-top:16px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
-@media(max-width:900px){.m-grid{grid-template-columns:1fr}.ctl{grid-template-columns:1fr}}
-
-/* 04 THE PLAY — cantaloupe slanted */
-.play{background:var(--canta);color:var(--ink);padding:150px 0 140px;clip-path:polygon(0 5%,100% 0,100% 95%,0 100%);margin:-40px 0;position:relative;z-index:2}
-.play-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.play-head h2{margin:0;font-size:clamp(70px,11vw,170px)}
-.play-head .mono{max-width:300px;text-transform:none;font-size:13px;letter-spacing:0;line-height:1.6}
-.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-left:2px solid var(--ink)}
-.st{border-right:2px solid var(--ink);padding:0 18px 10px;display:flex;flex-direction:column;gap:10px}
-.st:nth-child(even){padding-top:70px}
-.st b{font-family:var(--anton);font-weight:400;font-size:96px;line-height:.85;color:transparent;-webkit-text-stroke:2px var(--ink)}
-.st h3{margin:0;font-family:var(--anton);font-weight:400;font-size:28px;text-transform:uppercase;line-height:.95}
-.st p{margin:0;font-size:15px;line-height:1.45}
-@media(max-width:980px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.st{padding-top:20px!important;border-bottom:2px solid var(--ink);padding-bottom:22px}}
-
-/* 05 FIT CHECK */
-.fit{background:var(--black);padding:150px 0 100px}
-.fit-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:start}
-.fit h2{margin:0;font-size:clamp(70px,10vw,150px)}
-.fit h2 span{color:var(--canta)}
-.fit-lead{font-family:var(--mono);font-size:13px;color:#AEB2C0;margin:10px 0 28px}
-.tabs{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px}
-.tabs button{background:none;border:0;padding:0 0 6px;font-family:var(--anton);font-size:34px;text-transform:uppercase;color:#4E5262;border-bottom:5px solid transparent}
-.tabs button.on{color:var(--white);border-color:var(--blue)}
-.sheet{background:var(--paper);color:var(--ink);padding:6px 0 0;overflow-x:auto}
-.sheet table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:14px}
-.sheet th{background:var(--ink);color:var(--paper);text-align:left;padding:12px 16px;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.sheet td{padding:11px 16px;border-bottom:1px solid #CFC6B5}
-.sheet td:first-child{font-family:var(--anton);font-size:22px}
-.sheet tr:hover td{background:var(--canta)}
-.sheet-note{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#8A8F9E;margin-top:12px}
-.collars{position:relative;border:2px solid var(--white);padding:28px 26px 22px;margin-top:62px}
-.collars .big{position:absolute;right:-10px;top:-92px;font-family:var(--anton);font-size:200px;line-height:.8;color:var(--blue)}
-.collars h3{margin:0 0 18px;font-family:var(--anton);font-weight:400;font-size:36px;text-transform:uppercase;line-height:.95;max-width:200px}
-.cl{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:12px 0;border-top:1px solid #3A3D4A}
-.cl b{font-family:var(--black-face);font-weight:400;text-transform:uppercase;font-size:15px}
-.cl em{font-style:normal;font-family:var(--anton);font-size:30px;line-height:1;color:var(--canta);grid-row:span 2;align-self:center}
-.cl span{font-family:var(--mono);font-size:11.5px;color:#9BA0B3}
-.fit-grid>*{min-width:0}
-@media(max-width:900px){.fit-grid{grid-template-columns:1fr}}
-
-/* 06 CLOTH — paper type stack */
-.cloth{background:var(--paper);color:var(--ink);padding:100px 0;position:relative;overflow:hidden}
-.cloth .blob{position:absolute;width:560px;height:560px;left:-180px;bottom:-200px;border-radius:50%;color:var(--blue);opacity:.9;-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);mask:radial-gradient(circle,#000 30%,transparent 70%)}
-.cloth-top{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:24px;position:relative}
-.cloth-top .sec-no{color:var(--ink)}
-.fab{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:30px;align-items:center;border-top:4px solid var(--ink);padding:18px 0}
-.fab:last-child{border-bottom:4px solid var(--ink)}
-.fab h3{margin:0;font-family:var(--anton);font-weight:400;font-size:clamp(54px,8.5vw,128px);line-height:.85;text-transform:uppercase}
-.f2 h3{color:var(--blue);padding-left:8vw}
-.f3 h3{padding-left:3vw}
-.f3 h3 span{color:var(--canta2)}
-.fab p{margin:0;font-size:15px}
-@media(max-width:820px){.fab{grid-template-columns:1fr}.fab h3{padding-left:0!important}}
-
-/* 07 ASK */
-.ask{background:var(--black);padding:110px 0}
-.ask-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:50px;align-items:start}
-.ask-big{position:sticky;top:90px}
-.ask-big h2{margin:0;font-size:clamp(130px,20vw,300px);color:var(--blue)}
-.ask-big h2 span{color:var(--canta)}
-.ask-big p{font-family:var(--mono);font-size:13px;color:#AEB2C0;max-width:300px}
-.q{border-top:2px solid var(--white)}
-.q:last-child{border-bottom:2px solid var(--white)}
-.q button{width:100%;display:grid;grid-template-columns:54px 1fr 40px;align-items:center;gap:10px;background:none;border:0;padding:22px 0;text-align:left}
-.q button .n{font-family:var(--mono);font-size:12px;color:var(--canta)}
-.q button .t{font-family:var(--anton);font-size:clamp(26px,2.8vw,36px);text-transform:uppercase;line-height:1}
-.q button .pm{font-family:var(--anton);font-size:36px;text-align:right;color:var(--canta)}
-.q button:hover .t{color:var(--canta)}
-.q p{margin:0;padding:0 40px 24px 64px;color:#C9CBD4;max-width:640px}
-@media(max-width:900px){.ask-grid{grid-template-columns:1fr}.ask-big{position:static}}
-
-/* FINAL */
-.jom{position:relative;background:var(--canta);color:var(--ink);overflow:hidden;padding:90px 0 70px}
-.jom .halftone{position:absolute;inset:0;color:rgba(35,80,255,.55);-webkit-mask:linear-gradient(115deg,transparent 40%,#000 100%);mask:linear-gradient(115deg,transparent 40%,#000 100%)}
-.jom-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:30px;align-items:end;padding-right:min(20vw,280px)}
-.jom h2{margin:0;font-size:clamp(90px,14vw,230px);line-height:.88}
-.jom h2 span{display:block;color:var(--white);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill}
-.jom-side{display:flex;flex-direction:column;gap:22px;padding-bottom:16px}
-.jom-side p{margin:0;font-size:19px;font-weight:600;max-width:360px}
-.jom-tel{font-family:var(--anton);font-size:48px;line-height:1;text-decoration:none}
-.jom-shirt{position:absolute;right:2%;bottom:-50px;width:min(22vw,300px);transform:rotate(14deg);opacity:.95;pointer-events:none}
-@media(max-width:900px){.jom-in{grid-template-columns:1fr;padding-right:28px}.jom-shirt{display:none}}
-
-footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 30px;color:#9BA0B3}
-.colophon{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
-.colophon b{display:block;color:var(--white);font-family:var(--black-face);font-weight:400;font-size:15px;text-transform:uppercase;margin-bottom:8px}
-.colophon a{text-decoration:none}
-.colophon a:hover{color:var(--canta)}
-.colophon .mark{font-family:var(--black-face);font-size:64px;color:var(--white);letter-spacing:-.04em;line-height:.9}
-.fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:40px;padding-top:16px;border-top:1px solid var(--line)}
-.colophon>*{min-width:0}
-@media(max-width:900px){.colophon{grid-template-columns:1fr 1fr}.colophon>div:first-child{grid-column:1/-1}}
-@media(max-width:600px){.colophon .mark{font-size:48px}}
-.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--blue);color:var(--white);text-decoration:none;font-family:var(--black-face);font-size:13px;letter-spacing:.05em;padding:14px 16px;border:2px solid var(--black);box-shadow:5px 5px 0 var(--canta);display:flex;align-items:center;gap:10px;transform:rotate(-2deg)}
-.wa-float:hover{background:var(--canta);color:var(--black);box-shadow:5px 5px 0 var(--blue)}
-</style>
+<link rel="preload" as="image" href="assets/cut-front.webp">
+<link rel="stylesheet" href="assets/css/site.css?v=5">
 </head>
 <body>
 
@@ -299,24 +23,40 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 <a class="logo" href="#top" aria-label="Renwick home"><b>RENWICK</b><sup>A&amp;T — KL</sup></a>
 <nav class="mono" aria-label="Main">
 <a href="#lineup"><span>01</span>Line-up</a>
-<a href="#pitch"><span>02</span>On the pitch</a>
+<a href="#pitch"><span>02</span>Spin it</a>
 <a href="#maths"><span>03</span>Pricing</a>
 <a href="#fit"><span>05</span>Size guide</a>
 <a href="#ask"><span>07</span>FAQ</a>
 </nav>
 <a class="nav-cta wa" href="#">WHATSAPP →</a>
+<button class="menu-btn" id="menuOpen" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i>MENU</button>
 </div>
 </header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+<div class="menu-top"><span class="logo"><b>RENWICK</b></span><button class="menu-close" id="menuClose">CLOSE ✕</button></div>
+<nav class="menu-links" aria-label="Mobile">
+<a href="#lineup"><span>01</span><b>Line-up</b></a>
+<a href="#pitch"><span>02</span><b>Spin it 3D</b></a>
+<a href="#maths"><span>03</span><b>Get a price</b></a>
+<a href="#play"><span>04</span><b>How it works</b></a>
+<a href="#fit"><span>05</span><b>Size guide</b></a>
+<a href="#cloth"><span>06</span><b>Fabrics</b></a>
+<a href="#ask"><span>07</span><b>FAQ</b></a>
+</nav>
+<div class="menu-foot"><a class="btn btn-c wa" href="#">WhatsApp us <span class="arrow">→</span></a><span class="mono">018-267 6500 · Mon–Sat 9–7</span></div>
+</div>
 
 <main>
 <!-- HERO -->
 <section id="top" class="hero grain" aria-labelledby="hero-h">
 <div class="rays" aria-hidden="true"></div>
-<div class="wrap hero-meta mono"><span>Vol. 01 — Catalogue <b>2026/27</b></span><span>Custom jerseys · Polos · Uniforms</span><span>Kuala Lumpur, <b>MY</b></span></div>
+<div class="wrap hero-meta mono"><span>Vol. 01 — <b>2026/27</b></span><span class="mid">Custom jerseys · Polos · Uniforms</span><span>Kuala Lumpur, <b>MY</b></span></div>
 <h1 id="hero-h" class="sr">Renwick — custom jerseys from thirty pieces</h1>
 <div class="thirty anton" aria-hidden="true">THIRTY</div>
+<span class="side-tag" aria-hidden="true">Custom kits · Min. 30 pcs</span>
 <img class="hero-back" src="assets/cut-back.webp" alt="" aria-hidden="true">
-<img class="hero-shirt" src="assets/cut-front.webp" alt="Custom sublimated jersey made by Renwick for Windstrike Ultimate">
+<img class="hero-shirt" src="assets/cut-front.webp" alt="Custom sublimated jersey made by Renwick for Windstrike Ultimate" fetchpriority="high">
 <div class="deep anton" aria-hidden="true">DEEP.</div>
 <div class="hero-copy">
 <p><strong>Custom jerseys, polos and uniforms</strong> for teams, clubs, offices and schools across Malaysia. Thirty pieces gets you started. Your crest, your colours, every name on the back.</p>
@@ -341,42 +81,58 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 <div class="filters" id="filters" role="group" aria-label="Filter collections"></div>
 </div>
 </div>
-<div class="rows" id="rows"></div>
+<div class="rows" id="rows" aria-live="polite"></div>
+<div class="rail-meta" aria-hidden="true"><b id="railNo">01</b><div class="rail-bar"><i id="railBar"></i></div><span>Swipe →</span></div>
 </div>
 </section>
 
-<!-- 02 ON THE PITCH -->
-<section id="pitch" class="spread grain">
+<!-- 02 SPIN IT -->
+<section id="pitch" class="spin grain">
 <div class="wrap">
-<div class="sp-mast">
+<div class="spin-mast">
 <h2>Windstrike <em>Ultimate</em></h2>
-<span class="mono" style="color:#9BA0B3">02 — On the pitch · Ref. V5 Final · 23.11.26</span>
+<span class="mono" style="color:var(--soft)">02 — Spin it · WS-89 home kit · V5 final · 23.11.26</span>
 </div>
-<div class="sp-grid">
-<div>
-<figure class="frame"><img src="assets/windstrike-front.jpg" alt="Windstrike jersey, front view"><figcaption><span>Front</span><span>Fig. A</span></figcaption></figure>
-<figure class="frame"><img src="assets/windstrike-back.jpg" alt="Windstrike jersey, back view with Dzafri 89"><figcaption><span>Back</span><span>Fig. B</span></figcaption></figure>
-</div>
-<div class="sp-center">
-<div class="halftone dots" aria-hidden="true"></div>
-<span class="sp-89" aria-hidden="true">89</span>
-<img src="assets/cut-side.webp" alt="Windstrike jersey, side view">
-</div>
-<div class="sp-text">
-<p>Five versions. One final. The brief was simple: look fast standing still.</p>
-<p>Sky-to-white sublimated fade so the colour holds up under the sun. Navy side panels to cut the silhouette. The club's eagle crest on the chest, the Jalur Gemilang crescent on the sleeve, and a squad of names and numbers on the back.</p>
+<div class="spin-grid">
+<div class="spin-left">
+<h3>Spin<br><span>it.</span></h3>
+<p>Five versions, one final. Sky-to-white fade, navy side panels, eagle crest on the chest, Jalur Gemilang on the sleeve, a squad of names on the back.</p>
 <ul class="spec">
 <li><span>Fabric</span><span>Quick-dry micro</span></li>
 <li><span>Collar</span><span>Round neck</span></li>
-<li><span>Print</span><span>Full sublimation</span></li>
+<li><span>Print</span><span>Sublimation</span></li>
 <li><span>Back</span><span>Name + No.</span></li>
-<li><span>Rounds</span><span>V1 → V5</span></li>
 </ul>
 </div>
+
+<div class="viewer" data-jersey-viewer data-state="idle"
+     data-front="assets/3d/front.webp" data-back="assets/3d/back.webp" data-height="assets/3d/height.png" data-model=""
+     data-fb-front="assets/cut-front.webp" data-fb-side="assets/cut-side.webp" data-fb-back="assets/cut-back.webp">
+<div class="stage" data-stage>
+<div class="stage-bg" aria-hidden="true"><div class="halftone dots"></div></div>
+<span class="stage-89" aria-hidden="true">89</span>
+<div class="v-fallback" data-fallback><img src="assets/cut-front.webp" alt="Windstrike jersey"></div>
+<div class="v-load" aria-hidden="true"><b>Loading kit</b><div class="v-bar"><i data-progress></i></div><span class="mono" data-pct>0%</span></div>
+<div class="v-hint" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8 3 12l4 4M17 8l4 4-4 4M3 12h18"/></svg>Drag to spin</div>
+<div class="v-zoomhint">Scroll to zoom · Click outside to release</div>
 </div>
-<div class="sp-foot">
-<h3>WS-89 · Home kit</h3>
-<p>Every Renwick order gets the same treatment: proper mockups, front, back and side, until your team says it's done.</p>
+<div class="v-ctl" role="group" aria-label="3D jersey controls">
+<div class="views"><button data-view="front" aria-pressed="true">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="back" aria-pressed="false">Back</button></div>
+<div class="tools"><button class="t-reset" data-act="reset">Reset</button><button data-act="zoom-out" aria-label="Zoom out">−</button><button data-act="zoom-in" aria-label="Zoom in">+</button><button class="t-spin" data-act="spin" aria-pressed="true">Spin</button></div>
+</div>
+</div>
+
+<div class="figs-col">
+<div class="figs">
+<button class="frame" data-goto="front"><img src="assets/windstrike-front.jpg" alt="Front view photo"><span><span>Front</span><span>Fig. A</span></span></button>
+<button class="frame" data-goto="back"><img src="assets/windstrike-back.jpg" alt="Back view photo"><span><span>Back</span><span>Fig. B</span></span></button>
+<button class="frame phone" data-goto="side"><img src="assets/windstrike-side.jpg" alt="Side view photo"><span><span>Side</span><span>Fig. C</span></span></button>
+</div>
+<p class="figs-note">Tap a photo to turn the kit</p>
+</div>
+</div>
+<div class="spin-foot">
+<p>Every order gets the same treatment: proper mockups, front, back and side, until your team says it's done.</p>
 <a class="textlink" href="#maths">Price one like this →</a>
 </div>
 </div>
@@ -390,7 +146,10 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 <h2 class="anton">Do the<br><span>maths.</span></h2>
 <p class="m-lead">Price first, chat later. Set it up here, then send the whole thing to us on WhatsApp.</p>
 <div class="ctl"><label class="lbl" for="qty">Pieces</label>
-<div class="qty"><button id="dec" aria-label="Five fewer pieces">−</button><input id="qty" type="number" min="30" value="30" inputmode="numeric"><button id="inc" aria-label="Five more pieces">+</button><small class="mono">Min. 30</small></div></div>
+<div class="qty-wrap">
+<div class="qty"><button id="dec" aria-label="Five fewer pieces">−</button><input id="qty" type="number" min="30" step="1" value="30" inputmode="numeric" aria-describedby="qtyNote"><button id="inc" aria-label="Five more pieces">+</button><small class="mono" id="qtyNote" style="align-self:center;margin-left:14px">Min. 30</small></div>
+<div class="quick" id="quick" role="group" aria-label="Quick quantities"></div>
+</div></div>
 <div class="ctl"><div class="lbl">Collar</div><div class="opts" id="collars" role="group" aria-label="Collar"></div></div>
 <div class="ctl"><div class="lbl">Extras</div><div class="opts" id="addons" role="group" aria-label="Extras"></div></div>
 </div>
@@ -407,13 +166,14 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 </section>
 
 <!-- 04 THE PLAY -->
-<section class="play grain" aria-labelledby="play-h">
+<section id="play" class="play grain" aria-labelledby="play-h">
 <div class="wrap">
 <div class="play-head">
 <h2 id="play-h" class="anton">The play</h2>
-<p class="mono">Six moves from first message to kit day. Production starts once the deposit's in and the mockup's signed off in writing.</p>
+<p>Six moves from first message to kit day. Production starts once the deposit's in and the mockup's signed off in writing.</p>
 </div>
 <div class="steps" id="steps"></div>
+<div class="swipe" aria-hidden="true">Swipe the steps →</div>
 </div>
 </section>
 
@@ -424,7 +184,7 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 <h2 class="anton">Fit <span>check.</span></h2>
 <p class="fit-lead">Lay a shirt you like flat. Measure it. Match it here.</p>
 <div class="tabs" id="tabs" role="tablist" aria-label="Size chart"></div>
-<div class="sheet"><table><thead><tr><th>Size</th><th>Shoulder</th><th>Chest</th><th>Sleeve</th><th>Length</th></tr></thead><tbody id="sizeRows"></tbody></table></div>
+<div class="sheet" role="tabpanel"><table><thead><tr><th>Size</th><th>Shoulder</th><th>Chest</th><th>Sleeve</th><th>Length</th></tr></thead><tbody id="sizeRows"></tbody></table></div>
 <div class="sheet-note"><span id="sizeNote"></span> · Inches · ±5% tolerance</div>
 </div>
 <div class="collars">
@@ -439,10 +199,10 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 </section>
 
 <!-- 06 CLOTH -->
-<section class="cloth grain" aria-labelledby="cloth-h">
+<section id="cloth" class="cloth grain" aria-labelledby="cloth-h">
 <div class="blob dots" aria-hidden="true"></div>
 <div class="wrap">
-<div class="cloth-top"><h2 id="cloth-h" class="mono" style="margin:0">06 — The cloth</h2><span class="mono">Skin-safe dyes · Colour that stays</span></div>
+<div class="cloth-top"><h2 id="cloth-h" class="mono">06 — The cloth</h2><span class="mono">Skin-safe dyes · Colour that stays</span></div>
 <div class="fab f1"><h3>Quick-dry micro</h3><p>Moisture-wicking microfibre. Built for KL humidity and full-colour sublimation, edge to edge.</p></div>
 <div class="fab f2"><h3>Combed cotton</h3><p>100% combed cotton, single or double jersey. Soft enough for everyday tees and event shirts.</p></div>
 <div class="fab f3"><h3>Cotton <span>piqué</span></h3><p>The textured knit for polos and office uniforms. Holds embroidery clean.</p></div>
@@ -452,7 +212,7 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 <!-- 07 ASK -->
 <section id="ask" class="ask grain">
 <div class="wrap ask-grid">
-<div class="ask-big"><h2 class="anton">Ask<span>.</span></h2><p>Still unsure? These come up the most. Anything else, just message us.</p></div>
+<div class="ask-big"><h2 class="anton">Ask<span>.</span></h2><p>These come up the most. Anything else, just message us.</p></div>
 <div id="faqs"></div>
 </div>
 </section>
@@ -460,7 +220,7 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 <!-- FINAL -->
 <section class="jom grain" aria-labelledby="jom-h">
 <div class="halftone dots" aria-hidden="true"></div>
-<img class="jom-shirt" src="assets/cut-back.webp" alt="" aria-hidden="true">
+<img class="jom-shirt" src="assets/cut-back.webp" alt="" aria-hidden="true" loading="lazy">
 <div class="wrap jom-in">
 <h2 id="jom-h" class="anton">Buat jersey?<span>Jom.</span></h2>
 <div class="jom-side">
@@ -486,105 +246,12 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:46px 0 3
 
 <a class="wa-float wa" href="#" aria-label="Chat with Renwick on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>WHATSAPP</a>
 
-<script>
-(function(){
-var PHONE='60182676500';
-var wa=function(t){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(t)};
-document.querySelectorAll('.wa').forEach(function(a){a.href=wa('Hi Renwick! Nak buat custom jersey.');a.target='_blank';a.rel='noopener'});
-document.getElementById('yr').textContent=new Date().getFullYear();
-var rm=function(n){return 'RM'+n.toLocaleString('en-MY',{minimumFractionDigits:2,maximumFractionDigits:2})};
-var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
-var mk=function(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+<div class="dock" id="dock">
+<a class="d-price" href="#maths">Get a price</a>
+<div class="tot" aria-live="polite"><small>Estimate</small><b id="dockTotal"></b></div>
+<a class="d-wa" id="dockWa" href="#" target="_blank" rel="noopener">WhatsApp →</a>
+</div>
 
-// slanted ticker
-var tk=['Sports','Batik','Camo','Varsity','Modest','Polo','F1 Uniforms','Family Day','Plain'];
-var s=tk.map(function(x){return '<span>'+x+'</span><i>✱</i>'}).join('');
-document.getElementById('slash').innerHTML=s+s+s+s;
-
-// 01 collections
-var cols=[
-['RW 001–055','Sports & Activewear','Sport','Sublimated','#2350FF','Sublimated athletic patterns and geometric fades. Raglan or set-in sleeves, quick-dry microfibre.'],
-['RW 080–087','Streetwear & Varsity','Sport','Gridiron','#FFA36C','NFL-style cuts with sleeve stripes, big front and back numbers and your team wordmark.'],
-['RW 064–079','Tactical Camo','Sport','Outdoor','#4B5A3A','Digital, woodland, desert and urban camo for trips, adventure clubs and team-building.'],
-['RW 056–063','Heritage Batik','Office','Malaysian','#8C3A22','Modern batik motifs for Batik Fridays, cultural events and institutional wear.'],
-['Custom-made','Custom Polo Shirts','Office','Cut & sew','#0E1A3A','Colour-blocked, striped or tonal polos with rib collars, plackets and embroidered logos.'],
-['Custom-made','Corporate F1 Uniforms','Office','Workwear','#3A3F4F','Button-downs for execs and techs. Contrast yokes, two chest pockets, piped plackets.'],
-['RW 088–095','Islamic & Modest','Office','Muslimah cut','#1E5B52','Geometric arabesque and calligraphy-inspired prints, in unisex and longer Muslimah cuts.'],
-['FD #001–024','Family Day & Events','Events','34 emblems','#E9B43C','Lola, Swing, Tioman, Vacay, Jamboree and more, each carrying your family, company or trip name.'],
-['Ready stock','Plain Essentials','Events','All sizes','#C9C1B3','Blank cotton and microfibre tees in every size, ready for silkscreen, DTF or embroidery.']];
-var filter='All';
-function drawCols(){
-  var f=document.getElementById('filters');f.innerHTML='';
-  ['All','Sport','Office','Events'].forEach(function(x){var b=mk('button',x===filter?'on':'',x);b.setAttribute('aria-pressed',x===filter);b.onclick=function(){filter=x;drawCols()};f.appendChild(b)});
-  document.getElementById('rows').innerHTML=cols.filter(function(c){return filter==='All'||c[2]===filter}).map(function(c){
-    return '<article class="r"><span class="r-code">'+esc(c[0])+'</span><h3 class="r-name" style="margin:0">'+esc(c[1])+'</h3><p class="r-desc" style="margin:0">'+esc(c[5])+'</p><div class="r-sw" style="background:'+c[4]+'" aria-hidden="true"></div><span class="r-tag">'+esc(c[3])+'</span></article>'}).join('');
-}
-drawCols();
-
-// 03 maths
-var st={qty:30,collar:'Round neck',names:true,numbers:true,design:false};
-var qty=document.getElementById('qty');
-document.getElementById('rcno').textContent='RW-'+String(Date.now()).slice(-5);
-function drawQ(){
-  var q=Math.max(30,parseInt(st.qty,10)||30);
-  var c=document.getElementById('collars');c.innerHTML='';
-  ['Round neck','V-neck','Polo / Mandarin','Retro'].forEach(function(k){var b=mk('button','opt'+(st.collar===k?' on':''),esc(k));b.setAttribute('aria-pressed',st.collar===k);b.onclick=function(){st.collar=k;drawQ()};c.appendChild(b)});
-  var a=document.getElementById('addons');a.innerHTML='';
-  [['names','Names +RM2'],['numbers','Numbers +RM2'],['design','Design it for me +RM75']].forEach(function(x){var on=st[x[0]];var b=mk('button','opt'+(on?' on':''),(on?'✓ ':'+ ')+x[1]);b.setAttribute('aria-pressed',on);b.onclick=function(){st[x[0]]=!on;drawQ()};a.appendChild(b)});
-  var base=q*30,nm=st.names?q*2:0,nu=st.numbers?q*2:0,ds=st.design?75:0,tot=base+nm+nu+ds;
-  var L=[[q+' × jersey @30',rm(base)],['Collar: '+st.collar,'—']];
-  if(nm)L.push([q+' × name @2',rm(nm)]);if(nu)L.push([q+' × number @2',rm(nu)]);if(ds)L.push(['Design file prep',rm(ds)]);L.push(['Delivery · Klang Valley','FREE']);
-  document.getElementById('lines').innerHTML=L.map(function(l){return '<div class="rc-line"><span>'+esc(l[0])+'</span><span>'+l[1]+'</span></div>'}).join('');
-  document.getElementById('total').textContent=rm(tot);
-  document.getElementById('per').textContent=rm(tot/q);
-  document.getElementById('dep').textContent=rm(tot*.7);
-  document.getElementById('bal').textContent=rm(tot*.3);
-  document.getElementById('waQuote').href=wa('Hi Renwick! Quote please: '+q+' pcs, '+st.collar+' collar'+(st.names?', names':'')+(st.numbers?', numbers':'')+(st.design?', design service':'')+'. Website estimate '+rm(tot)+'.');
-}
-document.getElementById('dec').onclick=function(){st.qty=Math.max(30,(parseInt(st.qty,10)||30)-5);qty.value=st.qty;drawQ()};
-document.getElementById('inc').onclick=function(){st.qty=(parseInt(st.qty,10)||30)+5;qty.value=st.qty;drawQ()};
-qty.oninput=function(){st.qty=qty.value;drawQ()};
-qty.onblur=function(){st.qty=Math.max(30,parseInt(qty.value,10)||30);qty.value=st.qty;drawQ()};
-drawQ();
-
-// 04 steps
-document.getElementById('steps').innerHTML=[
-['01','Slide in','Template code or your own idea. Plus quantity and the date you need it.'],
-['02','Proforma','Clear breakdown, no surprises. Valid for 7 days.'],
-['03','Mockups','Front, back, side. Revise till it\'s right.'],
-['04','Deposit','70% to lock your slot. Sign off the mockup in writing.'],
-['05','Production','Printed, sewn, checked. About 14 working days.'],
-['06','Kit day','Pay the 30% balance. Jerseys on the way.']
-].map(function(x){return '<div class="st"><b>'+x[0]+'</b><h3>'+x[1]+'</h3><p>'+x[2]+'</p></div>'}).join('');
-
-// 05 sizes
-var sizes={
-Adult:['Unisex XS–7XL · Tees, jerseys, polos, uniforms',[['XS',16,36,7.5,25],['S',17,38,8,26],['M',18,40,8.5,27],['L',19,42,9,28],['XL',20,44,9.5,29],['2XL',21,46,10,30],['3XL',22,48,10.5,31],['5XL',24,52,11.5,33],['7XL',26,56,12,35]]],
-Muslimah:['Long sleeve · Hip-covering length',[['S',16,38,21,33.5],['M',17,40,21.5,34.5],['L',18,42,22,35.5],['XL',19,44,22.5,36.5],['2XL',19.5,46,23.5,37.5],['3XL',20.5,48,24.5,38.5]]],
-Kids:['Youth cut · Sizes 24–32',[['24',11.5,25,4.5,15.5],['26',12,27,5,17],['28',12.5,29,5.5,18.5],['30',13,31,6,20],['32',13.5,33,6.5,21.5]]]};
-var tab='Adult';
-function drawS(){
-  var t=document.getElementById('tabs');t.innerHTML='';
-  Object.keys(sizes).forEach(function(k){var b=mk('button',k===tab?'on':'',k);b.setAttribute('role','tab');b.setAttribute('aria-selected',k===tab);b.onclick=function(){tab=k;drawS()};t.appendChild(b)});
-  document.getElementById('sizeNote').textContent=sizes[tab][0];
-  document.getElementById('sizeRows').innerHTML=sizes[tab][1].map(function(r){return '<tr>'+r.map(function(v){return '<td>'+v+'</td>'}).join('')+'</tr>'}).join('');
-}
-drawS();
-
-// 07 faq
-var faqs=[
-['Minimum order?','30 pieces per design. Mix any sizes inside that 30, kids 24 all the way to 7XL.'],
-['How long does it take?','About 14 working days from mockup approval and deposit. Tight deadline? Ask us about rush slots.'],
-['Can you design it?','Yes. Send a logo and a rough idea, or a template code. First mockup is free. Full design file prep is RM75 if you don\'t have an .ai file.'],
-['How do I pay?','70% deposit to start, 30% before delivery. Proforma first, then an order form with the payment details.'],
-['Outside KL?','We ship anywhere in Malaysia. Klang Valley delivery is free for first-time clients.']];
-var open=0;
-function drawF(){
-  var w=document.getElementById('faqs');w.innerHTML='';
-  faqs.forEach(function(f,i){var d=mk('div','q');var b=mk('button',null,'<span class="n">Q.0'+(i+1)+'</span><span class="t">'+esc(f[0])+'</span><span class="pm">'+(open===i?'−':'+')+'</span>');b.setAttribute('aria-expanded',open===i);b.onclick=function(){open=open===i?-1:i;drawF()};d.appendChild(b);if(open===i)d.appendChild(mk('p',null,esc(f[1])));w.appendChild(d)});
-}
-drawF();
-})();
-</script>
+<script src="assets/js/site.js?v=4" defer></script>
 </body>
 </html>
